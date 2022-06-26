@@ -68,29 +68,29 @@ vetomo.on("guildMemberAdd", async (member) => {
 
     const noteworthyChannels  = [
         {
-            emoji: "ø",
+            emoji: "üìö",
             title: "Reglas & Anuncios",
             text: "Asegurate de haber leido las reglas de nuestro servidor antes de entrar en cualquier cosa. Tambien puedes consultar los anuncios relacionados con la banda y el servidor."
         },
         {
-            emoji: "ø",
+            emoji: "ü§ñ",
             title: "Bots",
             text: "Utilizar nuestros bots personalizados en los <#865036166004342789>"
         },
         {
-            emoji: "ø",
-            title: "Canales de Voz & M˙sica",
-            text: "Puedes hacer amistades mucho mas estrechas mediante los chats de voz o tambien si no tienes amigos :( puedes escuchar m˙sica mediante el obispo Andre"
+            emoji: "üé∂",
+            title: "Canales de Voz & M√∫sica",
+            text: "Puedes hacer amistades mucho mas estrechas mediante los chats de voz o tambien si no tienes amigos :( puedes escuchar m?sica mediante el obispo Andre"
         },
         {
-            emoji: "ø",
+            emoji: "üè¨",
             title: "Tienda",
             text: "Echa un vistazo a nuestros articulos actualmente en venta los cuales pueden traer beneficios a largo o corto plazo."
         },
         {
-            emoji: "ø",
+            emoji: "üì∞",
             title: "Actualizaciones",
-            text: "Mantente al dÌa con las publicaciones de la banda en <#865036165403770883>, y recibe notificaciones si dmaorg.info se actualiza en <#865036165403770884>. Puedes inscribirte para recibir notificaciones utilizando el comando `/roles notificaciones` en el canal de <#865036166004342789>."
+            text: "Mantente al d√≠a con las publicaciones de la banda en <#865036165403770883>, y recibe notificaciones si dmaorg.info se actualiza en <#865036165403770884>. Puedes inscribirte para recibir notificaciones utilizando el comando `/roles notificaciones` en el canal de <#865036166004342789>."
         }
     ]
 
@@ -98,7 +98,7 @@ vetomo.on("guildMemberAdd", async (member) => {
     .setTitle("Bienvenido al servidor de Discord Glowing Skeleton!")
     .setAuthor({ name: member.displayName, iconURL: member.user.displayAvatarURL() })
     .setDescription(
-        "®Tienes curiosidad por explorar el servidor? A continuaci¢n te mostramos algunos de los canales m†s populares para que los veas."
+        "Tienes curiosidad por explorar el servidor? A continuaci√≥n te mostramos algunos de los canales m√°s populares para que los veas."
     )
     .setImage("attachment://welcome.png");
 
