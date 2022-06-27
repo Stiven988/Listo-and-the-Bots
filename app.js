@@ -42,12 +42,15 @@ client.on("interactionCreate", async (interaction) => {
         if (!command) return;
 
         try {
-            await command.run(client, interaction)
+            await command.run(interaction)
         } catch (e) {
             console.error(e)
         }
  
-    } 
+    }
+    if (!interaction.isContextMenu()) return;
+    if (!interaction.isMessageContextMenu()) return;
+    if (!interaction.isUserContextMenu()) return;
 })
 
 client.on("messageCreate", async (message) => {
