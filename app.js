@@ -36,11 +36,18 @@ for (const folders of slshCommands) {
 }
 
 client.on("interactionCreate", async (interaction) => {
-    if (interaction.isCommand) {
+    if (interaction.isCommand() || interaction.isContextMenu() ) {
         const command = client.slashCommands.get(interaction.commandName);
+
         if (!command) return;
-        command.run (interaction);
-    }
+
+        try {
+            await command.run(client, interaction)
+        } catch (e) {
+            console.error(e)
+        }
+ 
+    } 
 })
 
 client.on("messageCreate", async (message) => {
