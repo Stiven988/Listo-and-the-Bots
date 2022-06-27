@@ -2,17 +2,16 @@ const { MessageEmbed, MessageActionRow, MessageSelectMenu } = require("discord.j
 const { ContextMenuCommandBuilder } = require("@discordjs/builders");
 
 module.exports = {
-    data: new ContextMenuCommandBuilder()
-    .setName("🚩 reportar mensaje")
-    .setType(3),
+    name: "🚩 reportar mensaje",
+    type: 3,
 
-    async run (client, interaction) {
-        await interaction.deferReply({ ephemeral: true });
+    run: async (interaction) => {
+
+        await interaction.deferReply({ ephemeral: true })
 
         const embed = new MessageEmbed()
-        .setTitle("Reportar mensaje")
-        .setDescription(
-            "🚧 EN OBRAS | Si desea informar este mensaje al personal del servidor, elija el motivo en el menú desplegable a continuación.\n\nSi esto fue un accidente, puede ignorar este mensaje con seguridad"
+        .setTitle("🚩 Reportar mensaje")
+        .setDescription("🚧 EN OBRAS | Si desea informar este mensaje al personal del servidor, elija el motivo en el menú desplegable a continuación.\n\nSi esto fue un accidente, puede ignorar este mensaje con seguridad"
         );
        
         const row = new MessageActionRow()
@@ -22,31 +21,30 @@ module.exports = {
             .setPlaceholder('Selecciona una razón')
             .addOptions(
                 {
-                    label: "Ser grosero con los demás",
+                    label: "Mal comportamiento",
                     description: "Ser grosero con los demás",
                     value: "being_rude"
                 },
                 {
-                    label: "Generar drama innecesario",
+                    label: "Drama",
                     description: "Generar drama innecesario",
                     value: "drama"
                 },
                 {
-                    label: "Spamming de mensajes/imágenes/etc",
+                    label: "Spam",
                     description: "Spamming de mensajes/imágenes/etc",
                     value: "spam"
                 },
                 {
-                    label: "Insultos, NSFW u otro contenido altamente inapropiado",
+                    label: "NSFW",
                     description: "Insultos, NSFW u otro contenido altamente inapropiado",
                     value: "nsfw"
                 }   
             )
         )
 
-        await interaction.editReply({ embeds: [embed], components: [row], ephemeral: true })
-
-
+        await interaction.editReply({ embeds: [embed], components: [row] })
 
     }
 }
+    
