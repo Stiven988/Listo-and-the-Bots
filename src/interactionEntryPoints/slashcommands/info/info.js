@@ -1,4 +1,4 @@
-const { MessageEmbed, Colors } = require("discord.js");
+ const { MessageEmbed, Colors } = require("discord.js");
 
 module.exports = {
     name: "ping",
